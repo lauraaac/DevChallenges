@@ -1,3 +1,5 @@
+import time
+
 class Solution:
 
     def exist(self, board, word) -> bool:
@@ -46,3 +48,12 @@ class Solution:
         #Update auxiliar board 
         checkedLetters[row][column] = 0
         return result
+        
+
+solution = Solution()
+
+start = time.time()
+solution.exist([["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]], "ABCESEEEFS")
+
+end = time.time()
+print("Execution time:", end-start)
