@@ -1,4 +1,4 @@
-#**DevChallenges**
+#DevChallenges
 
 Hi! I'm Laura and this is my first challenge for this intership 😯. I have to say that it was so cool ⚡. I have to think a lot 🧠, but you know, programming is a love hate relationship hehe ♥. I hope you enjoy my code and obviously I hope your feedBack! 💌
 
