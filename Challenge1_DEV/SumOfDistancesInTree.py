@@ -20,7 +20,7 @@ class Solution:
         self.depthFirst(0,None,tree)
         self.dist[0] = sum(self.dist.values())
         self.depthFirstForNodes(0,None,tree, self.dist[0])
-        return self.dist
+        return self.dist.values()
 
     def depthFirst(self,node,parent,tree):
 
@@ -49,12 +49,6 @@ class Solution:
            dist_added = dist + (self.n - self.numNodes[e])         
            dist_substracted = self.numNodes[e]
            self.dist[e] = dist_added - dist_substracted
-
-           print("node", e)
-           print("parent", node)
-           print("dist", dist)
-           print("added", dist_added)
-           print("subs", dist_substracted)
            self.depthFirstForNodes(e, node, tree, self.dist[e]) 
           
 
