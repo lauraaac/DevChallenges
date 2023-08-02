@@ -19,15 +19,21 @@ then O(1)
     4.3 Increment distance from one to others taking into account the distance from parent.
     We use dictionary, then it just takes one operation and it takes O(1)
 
-    4.4 Use recursively fuction with each child node. 
+    4.4 Use recursively fuction with each child node. Fuction will traverse 
+    all the child nodes of the node, but it considers already visited nodes, so 
+    in fact, DFS will takes O(n) 
 
 Considering all above,
 
-time = 
+time = O(n) + O(n) + O(1) * (O(n) + O(1) + O(1) + O(n))
+time = O(n) * O(n) = O(n^2)
 
 
 In space complexity:
 
-  
+  We use a dictionary to allocate each node with their childs, then it takes O(n)
+  we use a array to insert sum of distance for each node.
 
 then, Considering
+
+space = O(n) + O(n) = 2O(n) = O(n)

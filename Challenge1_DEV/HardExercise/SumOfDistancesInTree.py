@@ -13,16 +13,13 @@ class Solution:
         for e in edges:
           tree[e[0]].add(e[1])
           tree[e[1]].add(e[0])
-        print(len(tree))
-        #We travel the tree and sum distances using DFS for all nodes
-        #sumDist = []
 
         #Create dictionaries to allocate the number of nodes in subtree and distances from each node
         self.dist = dict([(i,0) for i in range(len(tree))])
         self.numNodes = dict([(i,1) for i in range(len(tree))])
         self.depthFirst(0,None,tree)
         self.dist[0] = sum(self.dist.values())
-        self.depthFirstForNodes(0,None,tree, self.dist[0])
+        self.depthFirstForNodes(0,None,tree,self.dist[0])
         return self.dist.values()
 
     def depthFirst(self,node,parent,tree):
