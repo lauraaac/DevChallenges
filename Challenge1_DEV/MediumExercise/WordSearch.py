@@ -56,4 +56,5 @@ start = time.time()
 solution.exist([["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]], "ABCESEEEFS")
 
 end = time.time()
-print("Execution time:", end-start)
+#print execution time
+print("Execution time:", "{:.20f}".format(end-start))

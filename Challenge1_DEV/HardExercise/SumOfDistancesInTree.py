@@ -1,3 +1,6 @@
+import time
+import test
+
 class Solution:     
 
     def sumOfDistancesInTree(self, n, edges):
@@ -10,7 +13,7 @@ class Solution:
         for e in edges:
           tree[e[0]].add(e[1])
           tree[e[1]].add(e[0])
-
+        print(len(tree))
         #We travel the tree and sum distances using DFS for all nodes
         #sumDist = []
 
@@ -40,18 +43,38 @@ class Solution:
           
       
 
+    #Create a fuction to get distances to all nodes from all nodes
     def depthFirstForNodes(self,node,parent,tree,dist):
        
+       #For each node in tree
        for e in tree[node]:
-
         if e != parent:
            
-           dist_added = dist + (self.n - self.numNodes[e])         
-           dist_substracted = self.numNodes[e]
-           self.dist[e] = dist_added - dist_substracted
-           self.depthFirstForNodes(e, node, tree, self.dist[e]) 
-          
+           #Get number of added distances for nodes out of the subtree e
+           dist_added = dist + (self.n - self.numNodes[e]) 
 
+           #Get number of substracted distances for nodes in subtree e        
+           dist_substracted = self.numNodes[e]
+
+           #Get the total change of distances in node e
+           self.dist[e] = dist_added - dist_substracted
+
+           #Go to child nodes of e and get distances considering new sum of distances from node e
+           self.depthFirstForNodes(e, node, tree, self.dist[e]) 
+
+
+#Save start time of execution     
+start = time.time()
+
+#Create class
 solution = Solution()
 
-print(solution.sumOfDistancesInTree(6, [[0,1],[0,2],[2,3],[2,4],[2,5]]))
+#Execute problem
+print(solution.sumOfDistancesInTree(10,test.test10))
+
+#Save finish time of execution
+end = time.time()
+
+print()
+#print execution time
+print("Execution time:", "{:.10f}".format(end-start))
