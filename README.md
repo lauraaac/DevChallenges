@@ -10,5 +10,6 @@ This is my link to ***LeetCode:*** 💻:
 
 *   Find the Distinct Difference Array (Completed and submitted): [Link to submission](https://leetcode.com/submissions/detail/1004869866/)
 *   Word Search (Completed and submitted): [Link to submission](https://leetcode.com/submissions/detail/1005505562/)
-*   Sum of Distances in Tree (Completed and submitted): [Link to submission](https://leetcode.com/submissions/detail/1006432763/). If you want to see brute force solution you can go to /Challenge1_DEV/SumOfDistanceInTreeBruteForce.py
+*   Sum of Distances in Tree (Completed and submitted): [Link to submission](https://leetcode.com/submissions/detail/1011520843/). If you want to see brute force solution you can go to /Challenge1_DEV/HardExercise/SumOfDistanceInTreeBruteForce.py
 
+If you want to see time and space complexity for each exercise go to analysis.md file for each folder.
